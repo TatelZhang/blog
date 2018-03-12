@@ -5,6 +5,8 @@
 * /views 模板文件
 * index.js 主文件
 * /config 配置文件夹
+
+数据库： mongod --config F:\MongoDB\etc\mongodb.conf
 ### /config 文件
 #### default.js
 1. port: 启动程序监听端口

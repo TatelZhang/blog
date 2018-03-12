@@ -6,7 +6,8 @@ const checkNotLogin = require('../middlewares/check').checkNotLogin
 // GET /signin 获取登录页面
 router.get('/', (req, res, next) => {
   res.render('pages/signin', {
-    user: 'tatel'
+    user: 'tatel',
+    logined: false
   })
 })
 // router.get('/', checkNotLogin, (req, res, next) => {
