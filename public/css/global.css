@@ -1,10 +1,60 @@
-body {
+html, body {
   /* background-color: aqua; */
+  height: 100%;
+}
+
+/* header */
+@media screen and (min-width: 767px) {
+  .content-container {
+    height: 100%;
+    /* width: 100%; */
+    padding-top:50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .signin-panel {
+    width: 30%;
+  }
+}
+@media (max-width: 767px) {
+  .content-container {
+    margin-top: -20px;
+    height: 100%;
+  }
+  .signin-panel {
+    width: 90%;
+  }
+
+}
+
+/* 登录页面 */
+.signin-page {
+  background-color: #2ac87b;
+  height: 100%;
+  width: 100%;
+}
+
+.signin-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 /* 注册页面 */
-
-.signin-panel {
-  background-color: #2ac87b;
-  height: 100vh;
+.signup-page {
+  height: 100%;
+  width: 100%;
+  /* background-color: #2ac87b; */
 }
+.signup-panel {
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+

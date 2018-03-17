@@ -1,3 +1,32 @@
-<%- include(../components/header)%>
-<span>注册页</span>
-<%- include(../components/footer)%>
+<%- include('../components/header') %>
+
+<div class="signup-page">
+  <div class="signup-panel">
+    <h1 style="text-align:center">注册</h1>
+    <form action="/signup">
+      <div class="form-group">
+        <label for="username">用户名：</label>
+        <input type="text" class="form-control" placeholder="用户名" id="username">
+      </div>
+      <div class="form-group">
+        <label for="passwd">密码：</label>
+        <input type="password" class="form-control" placeholder="密码" id="passwd">
+      </div>
+      <div class="form-group">
+        <label for="passwd1">重复密码：</label>
+        <input type="password" class="form-control" placeholder="重复密码" id="passwd1">
+      </div>
+      <div class="form-group">
+        <label for="gender">性别：</label>
+        <input type="password" class="form-control" placeholder="性别" id="gender">
+      </div>
+      <div class="form-group">
+        <label for="avatar">头像：</label>
+        <input type="file" class="form-control" placeholder="头像" id="avatar">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<%- include('../components/footer') %>
