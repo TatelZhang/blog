@@ -6,8 +6,7 @@ const checkNotLogin = require('../middlewares/check').checkNotLogin
 // GET /signin 获取登录页面
 router.get('/', (req, res, next) => {
   res.render('pages/signin', {
-    user: 'tatel',
-    logined: false
+    user: ''
   })
 })
 // router.get('/', checkNotLogin, (req, res, next) => {
@@ -18,7 +17,8 @@ router.get('/', (req, res, next) => {
 
 router.post('/', checkNotLogin, (req, res, next) => {
   // res.send('登录')
-  res.send('components/header')
+  // res.send('components/header')
+  res.redirect('/posts')
 })
 
 module.exports = router

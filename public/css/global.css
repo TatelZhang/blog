@@ -1,43 +1,36 @@
 html, body {
-  /* background-color: aqua; */
+  background-color: #fff;
   height: 100%;
 }
 
 /* header */
+.content-container {
+  /* overflow: auto; */
+  /* transform: translateX(0); */
+  padding-top: 1px;
+  /* background-color: #eee; */
+  margin-top: -21px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 @media screen and (min-width: 767px) {
-  .content-container {
-    height: 100%;
-    /* width: 100%; */
-    padding-top:50px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .signin-panel {
+  .signin-panel, .signup-panel {
     width: 30%;
   }
 }
-@media (max-width: 767px) {
-  .content-container {
-    margin-top: -20px;
-    height: 100%;
+@media screen and (max-width: 767px) {
+  .signin-panel, .signup-panel {
+    width: 85%;
   }
-  .signin-panel {
-    width: 90%;
-  }
-
 }
 
 /* 登录页面 */
 .signin-page {
-  background-color: #2ac87b;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 50%;
 }
-
-.signin-panel {
+.signin-panel, .signup-panel {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,15 +39,27 @@ html, body {
 
 /* 注册页面 */
 .signup-page {
-  height: 100%;
+  position: relative;
+  height: 80%;
   width: 100%;
-  /* background-color: #2ac87b; */
-}
-.signup-panel {
-  position: absolute;
-  width: 30%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
 }
 
+/* 文章页面 */
+.posts-page {
+  margin-top: 20px;
+}
+.article > .header {
+  border-bottom: 1px solid gray;
+}
+.article > .content {
+  margin-top: 20px;
+  /* border-bottom: 1px solid gray; */
+}
+
+.article > .comment {
+  margin-top: 20px;
+
+}
+.comment > .header {
+  border-bottom: 3px solid #aaa;
+}

@@ -5,21 +5,28 @@ const checkLogin = require('../middlewares/check').checkLogin
 
 // GET /posts/ 所有文章页
 router.get('/', (req, res, next) => {
-  res.send('主页')
+  res.render('pages/posts', {user: ''})
+})
+
+// 新建文章页
+router.get('/create', (req, res, next) => {
+  res.render('pages/posts/create', {
+    user: ''
+  })
 })
 
 // POST /posts/create 新建文章
 router.post('/create', checkLogin, (req, res, next) => {
-  res.send('发表文章')
+  res.render('pages/posts/creat')
 })
 
 // GET /posts/:postId 查看文章
 router.get('/:postId', (req, res, next) => {
-  res.send('文章详情')
+  res.render('pages/posts/detail', {user: 'a'})
 })
 
 // GET /posts/:postId/edit 编辑文章
-router.get('/:postId', checkLogin, (req, res, next) => {
+router.get('/:postId/edit', checkLogin, (req, res, next) => {
   res.send('更新文章页')
 })
 

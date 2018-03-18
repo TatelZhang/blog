@@ -19,7 +19,9 @@
     }
   </style>
   <link rel="stylesheet" href="/css/global.css">
-  <title><%= user%>-blog</title>
+  <title><% if(user) { %>
+    <%= user %> -
+  <% } %>blog</title>
 </head>
 <body>
   <header class="navbar navbar-static-top">
@@ -36,17 +38,17 @@
       <div class="navbar-collapse collapse" id="menu">
         <ul class="nav navbar-nav">
           <li>
-            <a href="">起步</a>
+            <a href="/posts/create">发表文章</a>
           </li>
           <li>
-            <a href="">全局样式</a>
+            <a href="/posts/112331232/edit">修改文章</a>
           </li>
           <li>
-            <a href="">组件</a>
+            <a href="/posts/10086">文章10086</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <% if (!logined ) {%>
+          <% if (!user ) {%>
           <li><a href="/signin">登录</a></li>
           <li><a href="/signup">注册</a></li>
           <% } else {%>
